@@ -1,7 +1,37 @@
+# ================================
+# Week 7 - Authentication System
+# .gitignore File
+# Author: Areshee Marimootoo
+# ================================
+
+# Ignore Python cache and compiled files
 __pycache__/
 *.pyc
 *.pyo
-*.env
+*.pyd
+
+# Ignore environment and dependency files
 .env
+*.env
+venv/
+env/
+.venv/
+
+# Ignore local IDE/project settings
 .vscode/
 .idea/
+*.code-workspace
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore temporary or testing logs
+*.log
+*.tmp
+
+# Ignore user-related data files
+failed_attempts.txt
+session_data.txt
+
