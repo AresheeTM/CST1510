@@ -1,4 +1,4 @@
-import bcrypt 
+import bcrypt
 from app.data.db import connect_database
 
 def get_user_by_username(username):

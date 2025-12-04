@@ -36,16 +36,16 @@ def create_cyber_incidents_table(conn):
 
     # TODO: Write CREATE TABLE IF NOT EXISTS SQL statement
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS cyber_incidents (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            date TEXT,
-            incident_type TEXT,
-            severity TEXT,
-            status TEXT,
-            description TEXT,
-            reported_by TEXT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
+       CREATE TABLE cyber_incidents (
+    incident_id INTEGER PRIMARY KEY,
+    timestamp TEXT NOT NULL,
+    severity TEXT NOT NULL,
+    category TEXT NOT NULL,
+    status TEXT NOT NULL,
+    description TEXT
+);
+
+
     """)
 
     # TODO: Commit the changes
@@ -62,16 +62,16 @@ def create_datasets_metadata_table(conn):
     cursor = conn.cursor()
 
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS datasets_metadata (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            dataset_name TEXT NOT NULL,
-            category TEXT,
-            source TEXT,
-            last_updated TEXT,
-            record_count INTEGER,
-            file_size_mb REAL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
+      CREATE TABLE dataset_metadata (
+    dataset_id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    rows INTEGER NOT NULL,
+    columns INTEGER NOT NULL,
+    uploaded_by TEXT,
+    upload_date TEXT
+);
+
+
     """)
 
     conn.commit()
@@ -85,19 +85,17 @@ def create_it_tickets_table(conn):
     cursor = conn.cursor()
 
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS it_tickets (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            ticket_id TEXT UNIQUE NOT NULL,
-            priority TEXT,
-            status TEXT,
-            category TEXT,
-            subject TEXT NOT NULL,
-            description TEXT,
-            created_date TEXT,
-            resolved_date TEXT,
-            assigned_to TEXT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
+        CREATE TABLE it_tickets (
+    ticket_id INTEGER PRIMARY KEY,
+    priority TEXT NOT NULL,
+    description TEXT,
+    status TEXT NOT NULL,
+    assigned_to TEXT,
+    created_at TEXT NOT NULL,
+    resolution_time_hours REAL
+);
+
+
     """)
 
     conn.commit()

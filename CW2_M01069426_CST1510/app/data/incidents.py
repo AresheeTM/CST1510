@@ -99,15 +99,18 @@ def get_incident_types_with_many_cases(conn, min_count=5):
     Find incident types with more than min_count cases.
     Uses: SELECT, FROM, GROUP BY, HAVING, ORDER BY
     """
+def get_incidents_by_type_count(conn):
     query = """
-    SELECT incident_type, COUNT(*) as count
-    FROM cyber_incidents
-    GROUP BY incident_type
-    HAVING COUNT(*) > ?
-    ORDER BY count DESC
+        SELECT 
+            category AS incident_type,
+            COUNT(*) AS count
+        FROM cyber_incidents
+        GROUP BY category
+        ORDER BY count DESC
     """
-    df = pd.read_sql_query(query, conn, params=(min_count,))
-    return df
+    return pd.read_sql_query(query, conn) 
+
+
 
 # Test: Run analytical queries
 conn = connect_database()
@@ -125,3 +128,9 @@ df_many_cases = get_incident_types_with_many_cases(conn, min_count=5)
 print(df_many_cases)
 
 conn.close()
+
+if __name__ == "__main__":
+    conn = connect_database()
+    df_by_type = get_incidents_by_type_count(conn)
+    print(df_by_type)
+

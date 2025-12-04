@@ -27,9 +27,7 @@ def login_user(username, password):
 
 
 
-# ---------------------------------------------------------------
-#              END OF TODO SECTIONS — NOTHING ELSE CHANGED
-# ---------------------------------------------------------------
+
 
 conn = connect_database()
 cursor = conn.cursor()
