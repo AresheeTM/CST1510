@@ -1,0 +1,11 @@
+streamlit
+pandas
+bcrypt
+numpy
+plotly.express
+streamlit.components.v1 
+base64
+json
+uuid
+
+

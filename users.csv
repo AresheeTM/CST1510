@@ -1,0 +1,6 @@
+username,password,role,last_login,avatar
+Alice,$2b$12$PGrFo.8ufd.giVS86lpJu.8CJemtB3hx3t8UI7Gn9SND4qzrIuV/y,Cybersecurity,2025-12-14T11:54:26.156937,
+Yena,$2b$12$Myx320JJZ.32Y3hLWHvIOuUgjhg2XqLGkI9IBOtYbI7.Aw4E0M8Km,Data Science,2025-12-14T11:10:18.501583,Yena_Yena p.p.jpg
+Yena,$2b$12$n1w8TZvzaTkQccGqi1y0gukDrJa.sPMuOj/VVyzqynPaTSxRJTwwS,Data Science,2025-12-14T11:10:18.501583,Yena_Yena p.p.jpg
+,$2b$12$Num4CPAMgU.Gxkq0Ej/ya.DgSBX5YKyKfcd3EXmWi/WcQDdo8izk6,Admin,2025-12-13T00:36:27.967671,default.png
+IT Guy,$2b$12$i9Fl8mwgfRIs74abBCci5OPqX0IhqpJQ4aAKgybMdKrpr2YedMk32,IT Operations,2025-12-14T11:11:09.334372,IT Guy_IT_GUY.jpg
