@@ -89,7 +89,7 @@ Each role has access only to allowed pages.
 -------------------
 My project is organized as follows:
 
-project_root/
+CST1500/
 │
 ├─ app/
 │ ├─ data/
@@ -133,15 +133,16 @@ project_root/
 
 6. RUNNING THE APPLICATION
 --------------------------
-1. Navigate to the project root directory in your terminal/command prompt.
-2. Run Streamlit: streamlit run streamlit_app.py
+1.Create a folder(.streamlit); inside create a secrets.toml and insert Gemini_API_Key.
+2. Navigate to the project root directory in your terminal/command prompt.
+3. Run Streamlit: streamlit run streamlit_app.py
 
-3. The platform will open in your default browser at `http://localhost:8501`.
-4. Login using one of the pre-configured users (credentials stored in `app/data/users.py`):
+4. The platform will open in your default browser at `http://localhost:8501`.
+5. Login using one of the pre-configured users (credentials stored in `app/data/users.py`):
    - Example:
      - Username: `admin`
      - Password: `admin123`
-5. Navigate dashboards using the sidebar menu.
+6. Navigate dashboards using the sidebar menu.
 
 ---
 
